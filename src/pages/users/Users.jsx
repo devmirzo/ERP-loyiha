@@ -127,7 +127,7 @@ const Users = () => {
       {/* Header section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
-          <h1 className="text-3xl font-extrabold text-white mb-2">Foydalanuvchilar va Ruxsatlar</h1>
+          <h1 className="text-3xl font-extrabold text-gray-700 mb-2">Foydalanuvchilar va Ruxsatlar</h1>
           <p className="text-gray-400">Tizimga kirish ruxsati bor xodimlarni boshqarish</p>
         </div>
         

@@ -236,7 +236,7 @@ const Sales = () => {
       {/* Header section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
-          <h1 className="text-3xl font-extrabold text-white mb-2">Sotuvlar</h1>
+          <h1 className="text-3xl font-extrabold text-gray-700 mb-2">Sotuvlar</h1>
           <p className="text-gray-400">Kassa (POS) va barcha tranzaksiyalar tarixi</p>
         </div>
         
@@ -311,11 +311,11 @@ const Sales = () => {
                     </td>
                     <td className="p-5 text-right">
                       <div className="font-bold text-emerald-400 text-lg">
-                        ${sale.total_amount?.toLocaleString()}
+                        {sale.total_amount?.toLocaleString()}
                       </div>
                       {sale.discount > 0 && (
                         <div className="text-xs text-rose-400">
-                          -${sale.discount?.toLocaleString()} cheg.
+                          -{sale.discount?.toLocaleString()} cheg.
                         </div>
                       )}
                     </td>

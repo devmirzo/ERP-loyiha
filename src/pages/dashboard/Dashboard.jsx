@@ -87,7 +87,7 @@ const Dashboard = () => {
       
       {/* Header section */}
       <div className="mb-8">
-        <h1 className="text-3xl font-extrabold text-white mb-2">Bosh sahifa</h1>
+        <h1 className="text-3xl font-extrabold text-gray-700 mb-2">Bosh sahifa</h1>
         <p className="text-gray-400">Biznesning joriy holati va asosiy ko'rsatkichlar (KPI)</p>
       </div>
 
@@ -100,7 +100,7 @@ const Dashboard = () => {
           <div className="flex justify-between items-start mb-4">
             <div>
               <p className="text-gray-400 text-sm font-medium mb-1">Umumiy tushum</p>
-              <h3 className="text-3xl font-bold text-white">${stats.totalSales.toLocaleString()}</h3>
+              <h3 className="text-3xl font-bold text-white">{stats.totalSales.toLocaleString()}</h3>
             </div>
             <div className="p-3 bg-emerald-500/20 rounded-2xl">
               <TrendingUp className="text-emerald-400" size={24} />
@@ -117,7 +117,7 @@ const Dashboard = () => {
           <div className="flex justify-between items-start mb-4">
             <div>
               <p className="text-gray-400 text-sm font-medium mb-1">Umumiy xarajat</p>
-              <h3 className="text-3xl font-bold text-white">${stats.totalExpenses.toLocaleString()}</h3>
+              <h3 className="text-3xl font-bold text-white">{stats.totalExpenses.toLocaleString()}</h3>
             </div>
             <div className="p-3 bg-rose-500/20 rounded-2xl">
               <TrendingDown className="text-rose-400" size={24} />
@@ -135,7 +135,7 @@ const Dashboard = () => {
             <div>
               <p className="text-gray-400 text-sm font-medium mb-1">Sof foyda (Tushum - Xarajat)</p>
               <h3 className={`text-3xl font-bold ${stats.netProfit >= 0 ? 'text-white' : 'text-rose-400'}`}>
-                ${stats.netProfit.toLocaleString()}
+                {stats.netProfit.toLocaleString()}
               </h3>
             </div>
             <div className={`p-3 rounded-2xl ${stats.netProfit >= 0 ? 'bg-purple-500/20' : 'bg-rose-500/20'}`}>
@@ -205,7 +205,7 @@ const Dashboard = () => {
                           {formatDate(sale.created_at)}
                         </td>
                         <td className="px-6 py-4 text-right font-bold text-emerald-400">
-                          +${sale.total_amount?.toLocaleString()}
+                          +{sale.total_amount?.toLocaleString()}
                         </td>
                       </tr>
                     ))
@@ -251,7 +251,7 @@ const Dashboard = () => {
                           {formatDate(exp.expense_date)}
                         </td>
                         <td className="px-6 py-4 text-right font-bold text-rose-400">
-                          -${exp.amount?.toLocaleString()}
+                          -{exp.amount?.toLocaleString()}
                         </td>
                       </tr>
                     ))

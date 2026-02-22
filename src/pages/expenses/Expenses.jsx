@@ -137,7 +137,7 @@ const Expenses = () => {
       {/* Header section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
-          <h1 className="text-3xl font-extrabold text-white mb-2">Xarajatlar</h1>
+          <h1 className="text-3xl font-extrabold text-gray-700 mb-2">Xarajatlar</h1>
           <p className="text-gray-400">Biznesning kundalik va oylik chiqimlarini nazorat qilish paneli</p>
         </div>
         
@@ -205,7 +205,7 @@ const Expenses = () => {
                     </td>
                     <td className="p-5">
                       <div className="font-semibold text-white mb-1">{exp.category}</div>
-                      <div className="text-sm text-gray-400 line-clamp-2 max-w-xs">{exp.description}</div>
+                      <div className="text-sm text-pink-100 line-clamp-2 max-w-xs">{exp.description}</div>
                     </td>
                     <td className="p-5">
                       <div className="flex items-center text-gray-400 text-sm">
@@ -216,7 +216,7 @@ const Expenses = () => {
                     <td className="p-5 text-right flex-col justify-center items-end">
                       <div className="flex items-center justify-end text-rose-400 font-bold text-lg">
                         <ArrowDownRight size={18} className="mr-1" />
-                        ${exp.amount?.toLocaleString()}
+                        {exp.amount?.toLocaleString()}
                       </div>
                     </td>
                     <td className="p-5">

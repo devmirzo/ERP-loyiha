@@ -185,7 +185,7 @@ const Batches = () => {
       {/* Header section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
-          <h1 className="text-3xl font-extrabold text-white mb-2">Omborga qabul (Kirim)</h1>
+          <h1 className="text-3xl font-extrabold text-gray-700 mb-2">Omborga qabul (Kirim)</h1>
           <p className="text-gray-400">Yangi kelgan mahsulotlarni zaxiraga qo'shish paneli</p>
         </div>
         
@@ -253,7 +253,7 @@ const Batches = () => {
                     </td>
                     <td className="p-5">
                       <div className="font-medium text-white">{batch.products?.name || 'Noma\'lum mahsulot'}</div>
-                      <div className="text-xs text-gray-500 mt-1">{batch.products?.category || ''}</div>
+                      <div className="text-xs text-pink-100 mt-1">{batch.products?.category || ''}</div>
                     </td>
                     <td className="p-5 text-center">
                       <span className="px-3 py-1 rounded-full text-sm font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
@@ -261,7 +261,7 @@ const Batches = () => {
                       </span>
                     </td>
                     <td className="p-5 text-right font-medium text-gray-300">
-                      ${batch.cost?.toLocaleString()} / umumiy
+                      {batch.cost?.toLocaleString()} / umumiy
                     </td>
                     <td className="p-5">
                       <div className="flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">

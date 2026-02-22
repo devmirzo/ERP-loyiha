@@ -135,7 +135,7 @@ const Products = () => {
       {/* Header section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
-          <h1 className="text-3xl font-extrabold text-white mb-2">Mahsulotlar</h1>
+          <h1 className="text-3xl font-extrabold text-gray-700 mb-2">Mahsulotlar</h1>
           <p className="text-gray-400">Barcha mahsulotlarni boshqarish paneli</p>
         </div>
         
@@ -196,7 +196,7 @@ const Products = () => {
                   <tr key={product.id} className="hover:bg-white/5 transition-colors group">
                     <td className="p-5">
                       <div className="font-medium text-white">{product.name}</div>
-                      {product.description && <div className="text-xs text-gray-500 mt-1 truncate max-w-xs">{product.description}</div>}
+                      {product.description && <div className="text-xs text-pink-100 mt-1 truncate max-w-xs">{product.description}</div>}
                     </td>
                     <td className="p-5">
                       <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
@@ -204,7 +204,7 @@ const Products = () => {
                       </span>
                     </td>
                     <td className="p-5 text-right font-medium text-green-400">
-                      ${product.price?.toLocaleString()}
+                      {product.price?.toLocaleString()}
                     </td>
                     <td className="p-5 text-center">
                       <span className={`px-3 py-1 rounded-full text-xs font-bold ${product.stock > 10 ? 'bg-green-500/10 text-green-400 border border-green-500/20' : product.stock > 0 ? 'bg-yellow-500/10 text-yellow-400 border border-yellow-500/20' : 'bg-red-500/10 text-red-500 border border-red-500/20'}`}>
