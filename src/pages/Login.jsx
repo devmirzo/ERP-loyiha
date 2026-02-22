@@ -61,7 +61,7 @@ const Login = () => {
           </button>
           
           <p className="mt-8 text-xs text-gray-500 uppercase tracking-widest font-semibold italic">
-            Powered by React + Supabase
+            Powered by Humoyun Mirzo Abdurasuljonov
           </p>
         </div>
       </div>
