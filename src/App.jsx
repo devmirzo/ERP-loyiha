@@ -16,6 +16,7 @@ const Users = React.lazy(() => import('./pages/users/Users'));
 const Statistics = React.lazy(() => import('./pages/statistics/Statistics'));
 const Reports = React.lazy(() => import('./pages/reports/Reports'));
 const KPI = React.lazy(() => import('./pages/kpi/KPI'));
+const Employees = React.lazy(() => import('./pages/employees/Employees'));
 
 
 class ErrorBoundary extends React.Component {
@@ -105,6 +106,11 @@ const App = () => {
                 <Route path="kpi" element={
                   <ProtectedRoute allowedRoles={['admin']}>
                     <KPI />
+                  </ProtectedRoute>
+                } />
+                <Route path="employees" element={
+                  <ProtectedRoute allowedRoles={['admin']}>
+                    <Employees />
                   </ProtectedRoute>
                 } />
 

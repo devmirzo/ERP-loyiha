@@ -29,6 +29,7 @@ const Sidebar = () => {
     { name: 'Statistika', path: '/statistics', icon: BarChart3, roles: ['admin'] },
     { name: 'Hisobotlar', path: '/reports', icon: FileText, roles: ['admin'] },
     { name: 'KPI', path: '/kpi', icon: Target, roles: ['admin'] },
+    { name: 'Xodimlar', path: '/employees', icon: Users, roles: ['admin'] },
   ];
 
   const filteredMenu = menuItems.filter(item => item.roles.includes(role));
