@@ -8,7 +8,10 @@ import {
   CreditCard, 
   UserCog, 
   LogOut,
-  Layers
+  Layers,
+  BarChart3,
+  FileText,
+  Target
 } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
@@ -23,6 +26,9 @@ const Sidebar = () => {
     { name: 'Clients', path: '/clients', icon: Users, roles: ['admin', 'seller', 'manager'] },
     { name: 'Expenses', path: '/expenses', icon: CreditCard, roles: ['admin', 'manager'] },
     { name: 'Users', path: '/users', icon: UserCog, roles: ['admin'] },
+    { name: 'Statistika', path: '/statistics', icon: BarChart3, roles: ['admin'] },
+    { name: 'Hisobotlar', path: '/reports', icon: FileText, roles: ['admin'] },
+    { name: 'KPI', path: '/kpi', icon: Target, roles: ['admin'] },
   ];
 
   const filteredMenu = menuItems.filter(item => item.roles.includes(role));
